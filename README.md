@@ -1,4 +1,10 @@
-# hello-world
-Just another repository.
+%%THIS IS THE CODE FOR A FUNCTION THAT CALCULATES THE NUMERICAL INTEGRATION OF A FUNCTION USING THE TRAPEZOID RULE
 
-But not the only, and one.
+function integral = quaem(f,a,b,n)
+  h=(b-a)/n;
+  result=0.5*f(a)+0.5*f(b);
+  for i=1:(n-1)
+    result=result+f(a+i*h);
+  end
+  integral=h*result;
+endfunction
